@@ -1,0 +1,17 @@
+# CHANGELOG — {PROJETO}
+
+> Itens fechados, com data e o que foi validado.
+> Mantido pelo PM. Cresce com o projeto.
+
+---
+
+## {DATA_ATUAL} — Início do projeto
+
+- Bootstrap do Atelier executado
+- Squad clonado de `https://github.com/seuuser/atelier`
+- Estrutura `.atelier/` criada
+- Sprint inicial montada com base no roadmap do briefing
+
+---
+
+*Próximos itens fechados serão registrados aqui.*

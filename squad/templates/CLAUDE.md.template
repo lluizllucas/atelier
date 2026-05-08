@@ -1,0 +1,141 @@
+# {PROJETO} — IA: leia só isto
+
+## Início obrigatório
+
+Leia só o bloco `SNAPSHOT` do `.atelier/SPRINT_ATELIER.md`.
+Pare assim que tiver: próxima tarefa, claim ativo, blockers, tamanho de sessão.
+Role mais para baixo só se precisar do detalhe do item escolhido.
+
+---
+
+## Squad disponível
+
+O time virtual está em `.atelier/squad/`. Cada cargo tem seu `.md` e é carregado **sob demanda** — não leia tudo de cara.
+
+| Cargo | Quando acionar |
+|---|---|
+| `PM.md` | Coordenação, sprints, roadmap |
+| `ANALISTA.md` | Quebra de requisitos, roteamento, desempate |
+| `DESENVOLVEDOR.md` | Implementação (único que mexe no código) |
+| `TECH_LEAD.md` | Revisão de design e decisão técnica |
+| `QA.md` | Validação de critério de aceite |
+| `DEVOPS.md` | Infra, deploy, custos (sob demanda) |
+| `DESIGNER.md` | UX/UI (sob demanda) |
+| `RH.md` | Criar expert de domínio (episódico) |
+
+Experts dinâmicos criados pelo RH ficam em `.atelier/squad/experts/`.
+
+---
+
+## O que é este projeto
+
+{DESCRICAO}
+
+**Para testar:** {COMO_TESTAR}
+
+---
+
+## Stack
+
+{STACK}
+
+---
+
+## Restrições permanentes (nunca violar)
+
+{RESTRICOES}
+
+---
+
+## Arquivos vivos
+
+| Arquivo | Dono | Função |
+|---|---|---|
+| `.atelier/SPRINT_ATELIER.md` | PM | Sprint atual, tarefas em foco |
+| `.atelier/ROADMAP.md` | PM | Visão completa do projeto |
+| `.atelier/CHANGELOG.md` | PM | Itens fechados |
+| `BRIEFING_QUORUM.md` | imutável | Análise inicial do Quorum |
+
+Leia o briefing apenas quando precisar entender escopo original ou decisões iniciais. No dia a dia, o SPRINT basta.
+
+---
+
+## Comandos
+
+| Comando | Cargo | Ação |
+|---|---|---|
+| `próxima tarefa` | PM | Indica próximo item disponível |
+| `continuar sprint` | PM | Status do sprint atual |
+| `fechar sprint` | PM | Fecha sprint, monta o próximo |
+| `DEV, executar [ITEM]` | DEV | Inicia implementação |
+| `QA, validar [ITEM]` | QA | Valida critério de aceite |
+| `revisar [ITEM]` | TECH_LEAD | Revisão de design antes do dev |
+| `convocar [DOMÍNIO]` | RH | Cria expert dinâmico |
+| `/save` | sistema | Salva log da sessão no vault |
+| `/resume` | sistema | Lê últimos logs e resume estado |
+
+---
+
+## Vault de memória persistente
+
+`{OBSIDIAN_VAULT}/{PROJETO}/`
+
+Estrutura:
+```
+{PROJETO}/
+├── logs/         ← /save grava aqui
+├── architecture/ ← decisões técnicas relevantes
+├── features/     ← detalhamento de features grandes
+└── context/
+    └── projeto.md  ← contexto completo
+```
+
+---
+
+## Comandos de sessão
+
+### /resume
+1. Leia os 3 logs mais recentes em `{OBSIDIAN_VAULT}/{PROJETO}/logs/`
+2. Leia `{OBSIDIAN_VAULT}/{PROJETO}/context/projeto.md`
+3. Leia `.atelier/SPRINT_ATELIER.md`
+4. Resuma o estado atual e indique próxima tarefa
+
+### /save
+1. Crie log em `{OBSIDIAN_VAULT}/{PROJETO}/logs/{DATA_ATUAL}-descricao.md`
+2. Registre: o que foi feito, decisões tomadas, pendências, claims ativos
+3. Frontmatter padrão:
+   ```
+   ---
+   title: Título do log
+   tags: [{PROJETO}, session-log]
+   created: {DATA_ATUAL}
+   updated: {DATA_ATUAL}
+   status: active
+   type: log
+   ---
+   ```
+
+---
+
+## Regras absolutas
+
+{REGRA_ABSOLUTA}
+
+Ao fechar item:
+1. Validar com critério de aceite real (QA)
+2. Atualizar SPRINT (mover para CHANGELOG)
+3. Remover claim
+4. `git status` antes de commitar
+5. Commitar só o escopo correto
+6. Push apenas quando autorizado
+
+---
+
+## Donos únicos (não violar)
+
+- **Código-fonte** → DESENVOLVEDOR (único que edita)
+- **`.atelier/SPRINT_ATELIER.md`** → PM (único que edita)
+- **`.atelier/ROADMAP.md`** → PM (único que edita)
+- **`.atelier/CHANGELOG.md`** → PM (único que edita)
+
+Quando outro cargo identifica que algo precisa mudar nesses arquivos, ele **reporta ao PM** e o PM decide se atualiza.
