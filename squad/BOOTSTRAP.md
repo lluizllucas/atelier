@@ -1,5 +1,24 @@
 # BOOTSTRAP — Setup do Atelier
 
+## Ativação automática
+
+O Claude Code deve executar este arquivo automaticamente quando encontrar
+`BRIEFING_QUORUM.md` na raiz do repositório ao abrir uma sessão nova.
+
+Não é necessário nenhum comando do usuário. O fluxo é:
+
+1. Claude Code abre no diretório do projeto
+2. Detecta `BRIEFING_QUORUM.md` na raiz
+3. Lê a seção "Instruções para o Claude Code" do briefing
+4. Identifica se é projeto novo ou existente
+5. Clona o squad e executa o modo correto
+
+Se `.atelier/` já existir, o bootstrap foi executado anteriormente — ignorar e
+carregar `.atelier/CLAUDE.md` normalmente.
+
+---
+
+
 Este arquivo é lido pelo Claude Code quando o usuário digita um dos comandos de bootstrap. Existem dois modos:
 
 - **`start project`** → projeto novo (repo vazio com apenas `BRIEFING_QUORUM.md`)

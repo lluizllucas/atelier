@@ -121,3 +121,27 @@ Para projetos existentes, basta entrar no `.atelier/squad/` e dar `git pull`.
 ## Relação com o Quorum
 
 O Quorum é episódico — analisa uma ideia e encerra. O Atelier é contínuo — acompanha um projeto ao longo do tempo. O `BRIEFING_QUORUM.md` é a ponte entre os dois.
+
+---
+
+## Projeto existente — migrar para Atelier
+
+Se o projeto já tem código, `CLAUDE.md` ou `ROADMAP*.md` maduros, use:
+
+```
+migrar para Atelier
+```
+
+O Atelier irá:
+1. Ler o `CLAUDE.md` e `ROADMAP*.md` existentes — sem apagar nada
+2. Clonar o squad para `.atelier/squad/`
+3. Criar `.atelier/CLAUDE.md` apontando para os arquivos originais
+4. Montar o `SPRINT_ATELIER.md` a partir do roadmap existente, preservando siglas e nomenclatura
+5. Migrar itens já concluídos para o `CHANGELOG.md`
+6. Apresentar a próxima tarefa identificada no SNAPSHOT original
+
+**Regra de ouro:** nada que já existe é apagado, movido ou sobrescrito.
+
+### Para projetos sem BRIEFING_QUORUM.md
+
+O briefing não é obrigatório em migrações. O Atelier extrai o contexto diretamente dos arquivos existentes do projeto.
