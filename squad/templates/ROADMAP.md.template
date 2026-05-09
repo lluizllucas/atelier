@@ -1,0 +1,44 @@
+# ROADMAP — {PROJETO}
+
+> Visão completa do projeto. Atualizado pelo PM.
+> Sprint atual fica em `.atelier/SPRINT_ATELIER.md`.
+> Itens fechados ficam em `.atelier/CHANGELOG.md`.
+
+---
+
+## 🎯 Definição de MVP
+
+O MVP está pronto quando:
+
+{MVP_CRITERIOS}
+
+---
+
+## 📋 Trilhas
+
+> Tamanhos: [P] = pequeno (horas) · [M] = médio (1–2 dias) · [G] = grande (3–5 dias)
+> Item fechado → mover para `.atelier/CHANGELOG.md` com data e o que foi validado.
+
+{ROADMAP_INICIAL}
+
+---
+
+## 🔒 Perguntas Abertas
+
+> Perguntas que precisam ser respondidas antes de implementar certos itens.
+
+*A preencher conforme o projeto avança.*
+
+---
+
+## 📌 Restrições permanentes
+
+{RESTRICOES}
+
+---
+
+## 📚 Decisões técnicas registradas
+
+> Decisões tomadas pelo Tech Lead que não devem ser questionadas a cada sessão.
+
+*A preencher conforme o projeto avança.*

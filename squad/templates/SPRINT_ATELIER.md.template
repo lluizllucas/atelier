@@ -1,0 +1,52 @@
+# SPRINT ATUAL — {PROJETO}
+
+---
+
+## ⚡ SNAPSHOT — Única leitura obrigatória. Atualizar ao iniciar E fechar qualquer tarefa.
+
+```
+SPRINT     : #1 — Sprint inicial · iniciada {DATA_ATUAL}
+STATUS     : Bootstrap concluído. Aguardando primeiro comando do PM.
+BRANCH     : main
+PRÓXIMA    : [primeira tarefa da lista abaixo]
+CLAIMS     : nenhum
+BLOCKER    : Nenhum conhecido.
+SESSÃO     : 1G · ou · 2-3M · ou · 4-6P
+
+REGRA ABSOLUTA (ler antes de qualquer alteração):
+  {REGRA_ABSOLUTA}
+
+QUANDO LER MAIS:
+  Visão completa do projeto       →  .atelier/ROADMAP.md
+  Itens já concluídos             →  .atelier/CHANGELOG.md
+  Contexto inicial do Quorum      →  BRIEFING_QUORUM.md (raiz do repo)
+  Detalhe de cargo                →  .atelier/squad/[CARGO].md
+```
+
+---
+
+## 📋 Tarefas do Sprint
+
+> Tamanhos: [P] = pequeno (horas) · [M] = médio (1–2 dias) · [G] = grande (3–5 dias)
+> Para iniciar: o cargo responsável marca `🔒 [CARGO]` ao lado do item.
+> Para fechar: PM move para CHANGELOG.
+
+{TAREFAS_INICIAIS}
+
+---
+
+## 🔒 Claims ativos
+
+*Nenhum claim no momento.*
+
+---
+
+## 🚧 Blockers
+
+*Nenhum blocker conhecido.*
+
+---
+
+## 📝 Notas da sprint
+
+*Decisões pequenas tomadas durante a sprint que não merecem entrar no ROADMAP nem no CHANGELOG, mas que vale documentar.*
